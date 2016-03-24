@@ -1,0 +1,55 @@
+﻿@model PlayNGoEmpDetails.employee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>employee</legend>
+
+    <div class="display-label">
+             <h3>ID</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empID)
+    </div>
+
+    <div class="display-label">
+               <h3>First Name</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empFName)
+    </div>
+
+    <div class="display-label">
+               <h3>Last Name</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empLName)
+    </div>
+
+    <div class="display-label">
+                <h3>Contact Number</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empContact)
+    </div>
+
+    <div class="display-label">
+               <h3>Address</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empAddress)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+      <input type="submit" value="Delete" /> |
+        </p>
+    <p>
+      
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,50 @@
+﻿@model PlayNGoEmpDetails.employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<fieldset>
+    <legend>employee</legend>
+
+    <div class="display-label">
+               <h3>ID</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empID)
+    </div>
+
+    <div class="display-label">
+               <h3>First Name</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empFName)
+    </div>
+
+    <div class="display-label">
+              <h3>Last Name</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empLName)
+    </div>
+
+    <div class="display-label">
+             <h3>Contact Number</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empContact)
+    </div>
+
+    <div class="display-label">
+                <h3>Address</h3>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empAddress)
+    </div>
+</fieldset>
+<br />
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

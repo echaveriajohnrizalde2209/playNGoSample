@@ -1,0 +1,67 @@
+﻿@model PlayNGoEmpDetails.employee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>employee</legend>
+
+      @*  <div class="control-label">
+          <h3>ID</h3>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.empID)
+            @Html.ValidationMessageFor(model => model.empID)
+        </div>*@
+
+        <div class="editor-label">
+          <h3>First Name</h3>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.empFName)
+            @Html.ValidationMessageFor(model => model.empFName)
+        </div>
+
+        <div class="editor-label">
+             <h3>Last Name</h3>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.empLName)
+            @Html.ValidationMessageFor(model => model.empLName)
+        </div>
+
+        <div class="editor-label">
+            <h3>Contact Number</h3>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.empContact)
+            @Html.ValidationMessageFor(model => model.empContact)
+        </div>
+
+        <div class="editor-label">
+              <h3>Address</h3>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.empAddress)
+            @Html.ValidationMessageFor(model => model.empAddress)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

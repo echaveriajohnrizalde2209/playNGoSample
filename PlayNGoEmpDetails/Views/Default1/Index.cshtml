@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PlayNGoEmpDetails.employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+<h2>Employee Details</h2>
+
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class = "table table-bordered">
+    <tr>
+        <th>
+             ID 
+            @* @Html.DisplayNameFor(model => model.empID) *@
+        </th>
+        <th>
+              First Name 
+           @*  @Html.DisplayNameFor(model => model.empFName) *@
+        </th>
+        <th>
+               Last Name
+           @* @Html.DisplayNameFor(model => model.empLName) *@
+        </th>
+        <th>
+               Contact Number 
+           @* @Html.DisplayNameFor(model => model.empContact) *@
+        </th>
+        <th>
+               Address 
+           @* @Html.DisplayNameFor(model => model.empAddress) *@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.empID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empFName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empLName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empContact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empAddress)
+        </td>
+        <td>
+
+            @Html.ActionLink("Edit", "Edit", new {  id=item.empID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.empID  }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.empID  })
+        </td>
+    </tr>
+}
+
+</table>
+</div>
